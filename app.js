@@ -108,7 +108,9 @@ app.delete("/user/:id",async(req,res)=>{
 
 
 
-app.listen(8000, (req, res) => {
-    console.log(`Server is Listening ...`)
-})
+// app.listen(8000, (req, res) => {
+//     console.log(`Server is Listening ...`)
+// })
+
+module.exports=app
 
