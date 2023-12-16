@@ -9,7 +9,7 @@ const mockdata = require("./data")
 
 const app = express()
 
-app.use(cors())
+app.use(cors({origin:["https://employee-dashboard-client-kopal-litauriyas-projects.vercel.app", "http://localhost:3000"]}))
 app.use(express.json())
 
 app.get("/", (req, res) => {
