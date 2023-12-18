@@ -11,6 +11,7 @@ const app = express()
 
 app.use(cors({origin:["https://employee-dashboard-client-kopal-litauriyas-projects.vercel.app", "http://localhost:3000"]}))
 app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 
 app.get("/", (req, res) => {
     res.send("All Good!!")
@@ -108,9 +109,9 @@ app.delete("/user/:id",async(req,res)=>{
 
 
 
-// app.listen(8000, (req, res) => {
-//     console.log(`Server is Listening ...`)
-// })
+app.listen(8000, (req, res) => {
+    console.log(`Server is Listening ...`)
+})
 
 module.exports=app
 
